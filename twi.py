@@ -63,8 +63,7 @@ def send_alert():
     print(text)
     message = client.messages.create( 
                                 from_='whatsapp:+14155238886',  
-                                body=f'{text}',      
+                                body="Cheems",      
                                 to='whatsapp:+918291523382' 
                             ) 
     
-    print(message.sid)
