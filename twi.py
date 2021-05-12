@@ -7,7 +7,7 @@ client = Client(account_sid, auth_token)
 def send_alert():
     message = client.messages.create( 
                                 from_='whatsapp:+14155238886',  
-                                body='Check for openings',      
+                                body='Hemlo',      
                                 to='whatsapp:+918291523382' 
                             ) 
     
