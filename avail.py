@@ -14,14 +14,12 @@ headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36
 base = datetime.datetime.today()
 date_list = [base + datetime.timedelta(days=x) for x in range(numdays)]
 date_str = [x.strftime("%d-%m-%Y") for x in date_list]
-print( date_str)
+print(date_str)
 
 for i in POST_CODE:
     for INP_DATE in date_str:
         URL = "https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/calendarByPin?pincode={}&date={}".format(i, INP_DATE)
-        print("Hello")
         response = requests.get(URL, headers=headers)
-        print(response)
         if response.ok:
             resp_json = response.json()
             # print(json.dumps(resp_json, indent = 1))
