@@ -49,7 +49,7 @@ for i in POST_CODE:
                                 
             else:
                 # print("No available slots on {}".format(INP_DATE))
-                text += "No available slots on {}".format(INP_DATE) + "\n"
+                # text += "No available slots on {}".format(INP_DATE) + "\n"
     text += "\n"
 # print(text)
 
