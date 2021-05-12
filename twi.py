@@ -49,7 +49,8 @@ for i in POST_CODE:
                                 
            
                 # print("No available slots on {}".format(INP_DATE))
-                # text += "No available slots on {}".format(INP_DATE) + "\n"
+            else:
+                text += "No available slots on {}".format(INP_DATE) + "\n"
     text += "\n"
 # print(text)
 
@@ -61,10 +62,10 @@ client = Client(account_sid, auth_token)
 
 def send_alert():
     print(text)
-    variable = "from a variable" + text + "something else"
+    # variable = "from a variable" + text + "something else"
     message = client.messages.create( 
                                 from_='whatsapp:+14155238886',  
-                                body=f'{variable}',      
+                                body=f'{text}',      
                                 to='whatsapp:+918291523382' 
                             ) 
     
