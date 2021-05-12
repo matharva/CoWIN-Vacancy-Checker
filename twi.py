@@ -61,9 +61,10 @@ client = Client(account_sid, auth_token)
 
 def send_alert():
     print(text)
+    variable = "from a variable"
     message = client.messages.create( 
                                 from_='whatsapp:+14155238886',  
-                                body=f'{text}',      
+                                body=f'{variable}',      
                                 to='whatsapp:+918291523382' 
                             ) 
     
