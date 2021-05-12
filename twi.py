@@ -47,7 +47,7 @@ for i in POST_CODE:
                                 if(session["vaccine"] != ''):
                                     text += "Vaccine Name: " + session["vaccine"] + "\n\n"
                                 
-            else:
+           
                 # print("No available slots on {}".format(INP_DATE))
                 # text += "No available slots on {}".format(INP_DATE) + "\n"
     text += "\n"
@@ -64,7 +64,7 @@ def send_alert():
     variable = "from a variable"
     message = client.messages.create( 
                                 from_='whatsapp:+14155238886',  
-                                body=f'{variable}',      
+                                body=f'{text}',      
                                 to='whatsapp:+918291523382' 
                             ) 
     
